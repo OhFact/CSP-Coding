@@ -1,0 +1,22 @@
+#Find the 10001st prime.
+NoP = 10001
+primelist = [2,3]
+i = 3
+if NoP == 1:
+   print(2) 
+if NoP == 2:
+   print(3)
+elif NoP >= 3:
+   while True:
+       i+=1
+       switch = 0
+       for c in range(2, int(i/2)+1):
+           if i%c == 0:
+               switch = 1
+               break
+       if switch == 0:
+           primelist.append(i)
+           print(primelist[-1])
+       if len(primelist) == NoP:
+           print(primelist[NoP - 1])
+           exit()
