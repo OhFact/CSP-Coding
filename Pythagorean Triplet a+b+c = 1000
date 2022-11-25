@@ -1,0 +1,12 @@
+import math
+n = 0
+while True:
+   a = range(500)
+   for b in range(500):
+       c = math.sqrt(a[n] ** 2 + b ** 2)
+       print(c, b, a[n])
+       if a[n] + b + c == 1000:
+           exit(print(a[n], b, c, (a[n]+b+c)))
+   print(n)
+   n += 1
+ # gonna be real with you, this took longer than id like to admit. it is compact, so iteration YAY!
