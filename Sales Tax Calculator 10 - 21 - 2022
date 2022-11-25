@@ -1,0 +1,14 @@
+# Pranav, Oct 21st, Sales Tax Calculator
+# Prompt the user for the prices of 3 items.  Calculate the sales tax.
+# Show the user the price of each item, the sub total, the total amount of sales tax and the final amount.
+# Format all output so that it looks nice.
+
+
+Price1 = float(input("First item price: "))
+Price2 = float(input("Second item price: "))
+Price3 = float(input("Third item price: "))
+
+print("---------------------------")
+print(f"Subtotal     :{Price1+Price2+Price3:10.2f}")
+print(f"Sales Tax    :{(Price1+Price2+Price3)*0.1:10.2f}")
+print(f"Total        :{(Price1+Price2+Price3)*1.1:10.2f}")
