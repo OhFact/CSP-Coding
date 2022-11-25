@@ -1,0 +1,33 @@
+# Pranav, Oct 21st, Sales Tax Calculator
+# Create functions for: getSubTot, getTax, getTot and createReceipt.
+# Prompt the user for the prices of 3 items then call (use) the functions to complete the rest of the program.
+
+
+def getsubtot(x, y, z):
+   global subtotal
+   subtotal = f"{(x + y + z):10.2f}"
+   return subtotal
+
+
+def gettax():
+   global tax
+   tax = float(subtotal)*0.1
+   return tax
+
+
+def gettotal():
+   total = float(tax) + float(subtotal)
+   return total
+
+
+Price1 = float(input("First item price: "))
+Price2 = float(input("Second item price: "))
+Price3 = float(input("Third item price: "))
+
+print(f"Price 1      :{Price1:10.2f}")
+print(f"Price 2      :{Price2:10.2f}")
+print(f"Price 3      :{Price3:10.2f}")
+print("-------------------------------------")
+print(f"Subtotal     :{getsubtot(Price1, Price2, Price3)}")
+print(f"Sales Tax    :{gettax():10.2f}")
+print(f"Total        :{gettotal():10.2f}")
