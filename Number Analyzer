@@ -1,0 +1,37 @@
+while True:
+   numbers = []
+   while True:
+       addswitch = input("Would you like to keep adding numbers : Yes or No\n")
+       if addswitch == "No":
+           break
+       addednumber = int(input("What number would you like to add to the list\n"))
+       numbers.append(addednumber)
+   numbers.sort()
+   NoE = 0
+   NoP = 0
+   for i in numbers:
+       switch = 0
+       if i % 2 == 0:
+           NoE = 1 + NoE
+       for n in range(2, int(i/2)+1):
+           if i % n == 0:
+               switch = 1
+               break
+       if switch == 0:
+           NoP = NoP + 1
+   print(f"Info: "
+         f"\nLength: {len(numbers)}"
+         f"\nMaximum: {numbers[-1]}"
+         f"\nMinimum: {numbers[0]}"
+         f"\nRange: {numbers[-1]-numbers[0]}"
+         f"\nNumber of Odd: {len(numbers)-NoE}"
+         f"\nNumber of Even: {NoE}"
+         f"\nSum of Numbers: {sum(numbers)}"
+         f"\nMean: {sum(numbers)/len(numbers)}"
+         f"\nNumber of Primes: {NoP}")
+   againboolean = input("Would you like to go again? Say Yes or No")
+   if againboolean == "No":
+       exit()
+       
+ #couldve optimized the start, but didnt seem too important as i knew the concept and implementing would be a short process
+ #for a bit of a challenge, optimize the starting sequence on your own
