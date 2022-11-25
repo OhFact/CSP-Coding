@@ -1,0 +1,12 @@
+#What is the smallest number divisible by each of the numbers 1 through 10
+lowest = 1
+divisor = 1
+while True:
+   if lowest % divisor == 0 and divisor == 9:
+       print(lowest)
+       exit()
+   elif lowest % divisor == 0:
+       divisor = divisor+1
+   elif lowest % divisor != 0:
+       divisor = 1
+       lowest = lowest + 1
