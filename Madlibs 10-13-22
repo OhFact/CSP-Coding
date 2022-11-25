@@ -1,0 +1,15 @@
+# Written on 10/13
+
+print("Hello! Welcome to MadLibs")
+verb1 = input("Tell me a few verbs, input your first one about a way to move to a place: ")
+verb2 = input("Tell me another")
+verb3 = input("One more")
+noun1 = input("Now tell me some nouns, input your first one: ")
+noun2 = input("One more ")
+food1 = input("Now say a food ")
+food2 = input("One more food ")
+place = input("Now tell me a place ")
+names1 = input("Now finally tell me 2 names, input your first ")
+names2 = input("One more ")
+print("Heres your madlib")
+print(f'My name is {names1}. My brother is {names2}. we {verb1} to {place}, and {verb2} my music while {verb3}. we see a {noun1}, and {noun2}. We eat {food1} and {food2} on the river. It was fun')
