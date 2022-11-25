@@ -1,0 +1,11 @@
+#How many different combinations of coins can be made to equal $1.00?
+total, NoP = int(float(input("What do the coins total to in dollars? : "))*100), 0
+for a in range(int(total / 50)+1):
+   for b in range(int((total - a * 50) / 25)+1):
+       for c in range(int((total - a * 50 - b * 25) / 10)+1):
+           NoP += ((total - a * 50 - b * 25 - c * 10) / 5) + 1
+print(NoP)
+#in my opinion the best logic ive made, super nice logic to a complex problem, the last logic helps a lot as for only nickels and pennies,
+#NoP = (Value/5)+1
+#suspect a master equation for all of this, but couldnt find it lol
+#plus, you dont have to worry about change less than 5 cents as it can be only filled by pennies, so will ALWAYS be a part of every combination, thus doesnt need to be factored in
