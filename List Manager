@@ -1,0 +1,30 @@
+#Prompt the user with a menu of options which should include;
+# display the list,
+# add an item to the list, - 1
+# remove an item from the list (by name or by number), - 2
+# swap two items position's in the list, - 3
+# clear the list, and -4
+# quit the program.  -5
+# Your program should use input/output, iteration, selection, sequencing and lists.
+
+List = [1,2,3]
+while True:
+   print(f"Your current list: {List}")
+   n = input("What would you like to do?\n Type [1] to add item\n Type [2] to subtract item\n"
+             " Type [3] to Swap 2 items in the list\n Type [4] to clear the list\n Type [5] to end program\n")
+   if n == "[1]":
+       c = int(input("What would you like to add \n"))
+       d = int(input("Where would you like to add it \n"))
+       List.insert(d,c)
+   elif n == "[2]":
+       d = int(input("Where would you like to remove an item from \n"))
+       del List[d]
+
+       c = int(input("What is the index of the item you want to switch  \n"))
+       d = int(input("Which index would you like to switch it with \n"))
+
+       List[c], List[d] = List[d], List[c]
+   elif n == "[4]":
+       List = []
+   elif n == "[5]":
+       break
